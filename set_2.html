@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style media="screen">
+      .container{
+        margin-top: 3%;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      h3{
+        text-align: center;
+      }
+    </style>
+    <title>Audit App</title>
+  </head>
+  <body>
+
+    <div class="content-fetch container">
+      <form class="" action="raport.html" method="abcdt">
+
+        <div class="meta-details form-group">
+
+          <h3>Machete (7-4) - (7-7)</h3>
+          <hr>
+
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">Tipul de evaluare</th>
+                <th scope="col">Scor maxim posibil</th>
+                <th scope="col">Scor obținut</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Set 1 -->
+              <tr>
+                <th scope="row">1.</th>
+                <td><a href="macheta_7-5.html" class="btn-link">Evaluarea riscurilor – privind obținerea resurselor umane și materiale</a> </td>
+                <td>100</td>
+                <td><span id="S1I1"></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">2.</th>
+                <td><a href="macheta_7-6.html" class="btn-link" >Evaluarea riscurilor privind achizițiile de soft  </a> </td>
+                <td>100</td>
+                <td><span id="S1I2"></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">3.</th>
+                <td><a href="macheta_7-7.html" class="btn-link" > Evaluarea riscului privind alte funcții ale sistemelor informatice </a> </td>
+                <td>100</td>
+                <td><span id="S1I3"></span></td>
+              </tr>
+
+              <tr>
+                <th scope="row" colspan="2">PUNCTAJ TOTAL DE RISC</th>
+                <td>300</td>
+                <td><span id="ST"></span></td>
+              </tr>
+
+              <tr>
+                <td colspan="4"></td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <a href="#" id="Rollup1" class="btn btn-primary" hidden>Înregistrează</a>
+
+          <hr>
+        </div>
+
+      </form>
+    </div>
+
+    <script type="text/javascript">
+
+      let qoa,qoa1,qoa2;
+
+
+	  let url = window.location.href
+
+	  
+	  if (url.split('?')[1].split('=')[0]=== "qoa") {
+	  try{
+        qoa = url.split('?')[1].split('=')[1]
+		localStorage.setItem("abcd"+1,qoa);
+		itWasNull = "true";
+		}
+      catch(error){
+        qoa = '';
+		localStorage.setItem("abcd"+1," ");
+      }  
+	     document.getElementById('S1I1').innerHTML =localStorage.getItem("abcd"+1);
+}
+	
+	
+  if (url.split('?')[1].split('=')[0]=== "qoa1" ) {
+	  try{
+        qoa1 = url.split('?')[1].split('=')[1]
+		localStorage.setItem("abcd"+2,qoa1);
+		var itWasNull1 = "true";
+		}
+      catch(error){
+		localStorage.setItem("abcd"+2," ");
+      }
+	  
+	console.log(localStorage.getItem("abc"+1));
+	  document.getElementById('S1I1').innerHTML =localStorage.getItem("abcd"+1);
+    document.getElementById('S1I2').innerHTML =localStorage.getItem("abcd"+2);
+}
+
+	if (url.split('?')[1].split('=')[0]=== "qoa2" ) {
+	  try{
+        qoa2 = url.split('?')[1].split('=')[1]
+		localStorage.setItem("abcd"+3,qoa2);
+		var itWasNull1 = "true";
+		}
+      catch(error){
+		localStorage.setItem("abcd"+3," ");
+      }
+	  
+	  document.getElementById('S1I1').innerHTML =localStorage.getItem("abcd"+1);
+    document.getElementById('S1I2').innerHTML =localStorage.getItem("abcd"+2);
+	    document.getElementById('S1I3').innerHTML =localStorage.getItem("abcd"+3);
+}
+
+
+	var values = [localStorage.getItem("abcd"+1),localStorage.getItem("abcd"+2),localStorage.getItem("abcd"+3)].map(Number);;
+	console.log(values)
+      let calculateSumAndRollup = () => {
+        let sum = 0;
+        let sumDisplay = document.getElementById('ST');
+        let rollupDisplay = document.getElementById('Rollup1');
+        values.forEach((val) => {
+          if(!isNaN(parseInt(val)) && sum != -1){
+            sum += parseInt(val)
+			console.log(sum)
+          }
+          else{
+            sum = -1;
+            sumDisplay.innerHTML = '';
+            rollupDisplay.setAttribute("hidden", "");
+          }
+        })
+        console.log(sum)
+        if(sum == -1)
+          return;
+        sumDisplay.innerHTML = sum;
+        rollupDisplay.setAttribute("href","raport.html?cr1=" + (sum))
+        rollupDisplay.removeAttribute("hidden");
+
+		console.log(sum)
+      }
+
+
+	  	calculateSumAndRollup();
+
+
+	let fillValue = (id, max, index, event) => {
+        event.preventDefault();
+		max = (values[0]+values[1])/2
+        let val = parseInt(Math.random() * max)
+        while(val < 0.7 * max){
+          val = parseInt(Math.random() * max)
+        }
+        values[index] = val;
+        document.getElementById(id).innerHTML = val
+        calculateSumAndRollup();
+		
+      }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style media="screen">
+      .container{
+        margin-top: 3%;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      h3{
+        text-align: center;
+      }
+    </style>
+    <title>Audit App</title>
+  </head>
+  <body>
+
+    <div class="content-fetch container">
+      <form class="" action="raport.html" method="post">
+
+        <div class="meta-details form-group">
+
+          <h3>Macheta 7-7 > Evaluarea riscului privind alte funcții ale sistemelor informatice </h3>
+          <hr>
+
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">Factor de evaluare</th>
+                <th scope="col">Evaluare</th>
+                <th scope="col">Pondere</th>
+                <th scope="col">Scor obținut</th>
+                <th scope="col">Scor maxim posibil</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Set 1 -->
+              <tr>
+                <th scope="row">1.</th>
+                <td>Efectul eșecului unei funcții </td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI1" id="BOI1V1" value="1" onclick="fillValue('BOI1', 5, 'S1I1', 0, event)">
+                      <label class="form-check-label" for="BOI1V1">
+                        Nu are efect imediat
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI1" id="BOI1V2" value="2" onclick="fillValue('BOI1',5, 'S1I1', 0, event)">
+                      <label class="form-check-label" for="BOI1V2">
+                        Inconveniențe pentru utilizatori
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI1" id="BOI1V3" value="3" onclick="fillValue('BOI1', 5, 'S1I1', 0, event)">
+                      <label class="form-check-label" for="BOI1V3">
+                        Pierdere de beneficiu
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI1" id="BOI1V4" value="4" onclick="fillValue('BOI1', 5, 'S1I1', 0, event)">
+                      <label class="form-check-label" for="BOI1V4">
+                         Pierdere de venit
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI1" id="BOI1V5" value="5" onclick="fillValue('BOI1', 5, 'S1I1', 0, event)">
+                      <label class="form-check-label" for="BOI1V5">
+                       Pierdere de afacere/venit/profit
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <p  name="RMI1" id="RMI1V1" >
+                        5
+						</p>
+                    </div>
+                  </div>
+                </td>
+                <td><span id="S1I1"></span></td>
+                <td>25</td>
+              </tr>
+
+              <tr>
+                <th scope="row">2.</th>
+                <td>Scopul funcției </td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI2" id="BOI2V1" value="1" onclick="fillValue('BOI2', 2, 'S1I2', 1, event)">
+                      <label class="form-check-label" for="BOI2V1">
+                      O parte din departament
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI2" id="BOI2V2" value="2" onclick="fillValue('BOI2', 2, 'S1I2', 1, event)">
+                      <label class="form-check-label" for="BOI2V2">
+                        Departamentul complet
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI2" id="BOI2V3" value="3" onclick="fillValue('BOI2', 2, 'S1I2', 1, event)">
+                      <label class="form-check-label" for="BOI2V3">
+                        Departamente multiple
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI2" id="BOI2V4" value="4" onclick="fillValue('BOI2', 2, 'S1I2', 1, event)">
+                      <label class="form-check-label" for="BOI2V4">
+                        Intreaga organizație
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI2" id="BOI2V5" value="5" onclick="fillValue('BOI2', 2, 'S1I2', 1, event)">
+                      <label class="form-check-label" for="BOI2V5">
+                        Organizația și exterior
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="">
+              
+                    <div class="form-check form-check-inline">
+                      <p  name="RMI2" id="RMI2V4" value="5">
+                        2
+                      <p>
+                    </div>
+                  </div>
+                </td>
+                <td><span id="S1I2"></span></td>
+                <td>10</td>
+              </tr>
+
+
+              <tr>
+                <th scope="row">3.</th>
+                <td>Vârsta funcției</td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI3" id="BOI3V1" value="1" onclick="fillValue('BOI3', 1, 'S1I3', 2, event)">
+                      <label class="form-check-label" for="BOI3V1">
+                       Peste 10 ani
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI3" id="BOI3V2" value="2" onclick="fillValue('BOI3', 1, 'S1I3', 2, event)">
+                      <label class="form-check-label" for="BOI3V2">
+                        7-10 ani
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI3" id="BOI3V3" value="3" onclick="fillValue('BOI3', 1, 'S1I3', 2, event)">
+                      <label class="form-check-label" for="BOI3V3">
+                        4-6 ani
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI3" id="BOI3V4" value="4" onclick="fillValue('BOI3', 1, 'S1I3', 2, event)">
+                      <label class="form-check-label" for="BOI3V4">
+                        1-3 an
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI3" id="BOI3V5" value="5" onclick="fillValue('BOI3',1, 'S1I3', 2, event)">
+                      <label class="form-check-label" for="BOI3V5">
+                        Mai puțin de un an
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <p name="RMI3" id="RMI3V4">
+                        1
+                      </p>
+                    </div>
+                  </div>
+                </td>
+                <td><span id="S1I3"></span></td>
+                <td>5</td>
+              </tr>
+
+
+              <tr>
+                <th scope="row">4.</th>
+                <td>Constatări anterioare ale auditului</td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI4" id="BOI4V1" value="1" onclick="fillValue('BOI4', 2, 'S1I4', 3, event)">
+                      <label class="form-check-label" for="BOI4V1">
+                        Audit recent – fără puncte slabe
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI4" id="BOI4V2" value="2" onclick="fillValue('BOI4', 2, 'S1I4', 3, event)">
+                      <label class="form-check-label" for="BOI4V2">
+                        Audit recent – puncte slabe minore
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI4" id="BOI4V3" value="3" onclick="fillValue('BOI4', 2, 'S1I4', 3, event)">
+                      <label class="form-check-label" for="BOI4V3">
+                       Fără audit anterior
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI4" id="BOI4V4" value="4" onclick="fillValue('BOI4', 2, 'S1I4', 3, event)">
+                      <label class="form-check-label" for="BOI4V4">
+                       Audit – câteva puncte slabe
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI4" id="BOI4V5" value="5" onclick="fillValue('BOI4',2, 'S1I4', 3, event)">
+                      <label class="form-check-label" for="BOI4V5">
+                        Audit – multe puncte slabe
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="">
+    
+                    <div class="form-check form-check-inline">
+                      <p  name="RMI4" id="RMI4V4" value="1" >
+                        2
+                      </p>
+                    </div>
+                  </div>
+                </td>
+                <td><span id="S1I4"></span></td>
+                <td>10</td>
+              </tr>
+
+
+              <tr>
+                <th scope="row">5.</th>
+                <td>Complexitatea funcției </td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI5" id="BOI5V1" value="1" onclick="fillValue('BOI5', 3, 'S1I5', 4, event)">
+                      <label class="form-check-label" for="BOI5V1">
+                        Foarte mică
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI5" id="BOI5V2" value="2" onclick="fillValue('BOI5', 3, 'S1I5', 4, event)">
+                      <label class="form-check-label" for="BOI5V2">
+                        Mică
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI5" id="BOI5V3" value="3" onclick="fillValue('BOI5', 3, 'S1I5', 4, event)">
+                      <label class="form-check-label" for="BOI5V3">
+                        Moderată
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI5" id="BOI5V4" value="4" onclick="fillValue('BOI5', 3, 'S1I5', 4, event)">
+                      <label class="form-check-label" for="BOI5V4">
+                        Mare
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI5" id="BOI5V5" value="5" onclick="fillValue('BOI5', 3, 'S1I5', 4, event)">
+                      <label class="form-check-label" for="BOI5V5">
+                         Foarte mare
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="">
+                    
+                    <div class="form-check form-check-inline">
+                      <p name="RMI5" id="RMI5V4" >
+                        3
+                      </p>
+                    </div>
+                  </div>
+                </td>
+                <td><span id="S1I5"></span></td>
+                <td>15</td>
+              </tr>
+
+              <tr>
+                <th scope="row">6.</th>
+                <td>Număr de personal  </td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI6" id="BOI6V1" value="1" onclick="fillValue('BOI6', 1, 'S1I6', 5, event)">
+                      <label class="form-check-label" for="BOI6V1">
+                        O persoană
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI6" id="BOI6V2" value="2" onclick="fillValue('BOI6', 1, 'S1I6', 5, event)">
+                      <label class="form-check-label" for="BOI6V2">
+                       Mai puțin de 5
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI6" id="BOI6V3" value="3" onclick="fillValue('BOI6', 1, 'S1I6', 5, event)">
+                      <label class="form-check-label" for="BOI6V3">
+                       Între 6-10
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI6" id="BOI6V4" value="4" onclick="fillValue('BOI6', 1, 'S1I6', 5, event)">
+                      <label class="form-check-label" for="BOI6V4">
+                       Între 11-25
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI6" id="BOI6V5" value="5" onclick="fillValue('BOI6', 1, 'S1I6', 5, event)">
+                      <label class="form-check-label" for="BOI6V5">
+                       Peste 25
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="">
+                    
+                    <div class="form-check form-check-inline">
+                      <p name="RMI6" id="RMI6V4" >
+                        1
+                      </p>
+                    </div>
+                  </div>
+                </td>
+                <td><span id="S1I6"></span></td>
+                <td>5</td>
+              </tr>
+			  
+			  <tr>
+			
+                <th scope="row">7.</th>
+                <td>Număr de locații   </td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI7" id="BOI7V1" value="1" onclick="fillValue('BOI7', 1, 'S1I7', 6, event)">
+                      <label class="form-check-label" for="BOI7V1">
+                      1
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI7" id="BOI7V2" value="2" onclick="fillValue('BOI7', 1, 'S1I7', 6, event)">
+                      <label class="form-check-label" for="BOI7V2">
+                       2
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI7" id="BOI7V3" value="3" onclick="fillValue('BOI7', 1, 'S1I7', 6, event)">
+                      <label class="form-check-label" for="BOI7V3">
+						3
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI7" id="BOI7V4" value="4" onclick="fillValue('BOI7', 1, 'S1I7', 6, event)">
+                      <label class="form-check-label" for="BOI7V4">
+                        4
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI7" id="BOI5V5" value="5" onclick="fillValue('BOI7', 1, 'S1I7', 6, event)">
+                      <label class="form-check-label" for="BOI7V5">
+                          5+
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="">
+                    
+                    <div class="form-check form-check-inline">
+                      <p name="RMI5" id="RMI5V4" >
+                        1
+                      </p>
+                    </div>
+                  </div>
+                </td>
+                <td><span id="S1I7"></span></td>
+                <td>5</td>
+              </tr>
+                
+				<tr>
+                <th scope="row">8.</th>
+                <td>Expunere financiară </td>
+                <td>
+                  <div class="">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI8" id="BOI8V1" value="1" onclick="fillValue('BOI8', 5, 'S1I8', 7, event)">
+                      <label class="form-check-label" for="BOI8V1">
+                        Nici una
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI8" id="BOI8V2" value="2" onclick="fillValue('BOI8', 5, 'S1I8', 7, event)">
+                      <label class="form-check-label" for="BOI8V2">
+                       Mică
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI8" id="BOI8V3" value="3" onclick="fillValue('BOI8', 5, 'S1I8',7, event)">
+                      <label class="form-check-label" for="BOI8V3">
+                        Moderată
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI8" id="BOI8V4" value="4" onclick="fillValue('BOI8', 5, 'S1I8', 7, event)">
+                      <label class="form-check-label" for="BOI8V4">
+                        Mare
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="BOI8" id="BOI8V5" value="5" onclick="fillValue('BOI8', 5, 'S1I8', 7, event)">
+                      <label class="form-check-label" for="BOI8V5">
+                          Foarte Mare
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="">
+                    
+                    <div class="form-check form-check-inline">
+                      <p name="RMI5" id="RMI5V4" >
+                        5
+                      </p>
+                    </div>
+                  </div>
+                </td>
+                <td><span id="S1I8"></span></td>
+                <td>25</td>
+              </tr>
+			  <tr>
+                <th scope="row" colspan="4">PUNCTAJ TOTAL DE RISC</th>
+                <td><span id="T"></span></td>
+                <td>100</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <a href="macheta_7-6" id="Rollup" class="btn btn-primary" hidden>Înregistrează</a>
+
+          <hr>
+        </div>
+
+      </form>
+    </div>
+
+    <script type="text/javascript">
+
+      let values = ['', '', '', '', '', '', '', '']
+
+      let getCheckedItemValue = (name) => {
+        var items = document.getElementsByName(name);
+        let val = 0;
+        items.forEach((item) => {
+          if(item.checked)
+            val = item.value
+        })
+        return val;
+      }
+
+      let calculateSumAndDisplayRollUp = () => {
+        let sum = 0;
+        let sumDisplay = document.getElementById('T');
+        let rollupDisplay = document.getElementById('Rollup');
+        values.forEach((val) => {
+          if(val != '')
+            sum += parseInt(val)
+          else{
+            sumDisplay.innerHTML = '';
+            rollupDisplay.setAttribute('hidden');
+            return;
+          }
+        })
+        sumDisplay.innerHTML = sum;
+        rollupDisplay.setAttribute("href","set_2.html?qoa2=" + sum)
+        rollupDisplay.removeAttribute("hidden");
+      }
+
+      let fillValue = (breachesObseverd, riskMatrix, id, index, event) => {
+        let breachesObseverdValue = getCheckedItemValue(breachesObseverd);
+        let riskMatrixValue = riskMatrix;
+        breachesObseverdValue = parseInt(breachesObseverdValue) ? parseInt(breachesObseverdValue) : 0
+        riskMatrixValue = parseInt(riskMatrixValue) ? parseInt(riskMatrixValue) : 0
+        document.getElementById(id).innerHTML = breachesObseverdValue * riskMatrixValue;
+        values[index] = breachesObseverdValue * riskMatrixValue;
+        calculateSumAndDisplayRollUp();
+      }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>
